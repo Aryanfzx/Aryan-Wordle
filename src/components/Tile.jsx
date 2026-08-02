@@ -1,0 +1,9 @@
+export default function Tile({ letter, status }) {
+    const className = `tile ${status || ""}`.trim();
+
+    return (
+        <div className={className}>
+            {letter}
+        </div>
+    );
+}
