@@ -5,7 +5,6 @@ import Board from "./components/Board";
 import Keyboard from "./components/Keyboard";
 
 export default function App() {
-  // Pick one random answer when the app loads
   const [answer] = useState(() => getRandomWord());
 
   const {
@@ -19,7 +18,6 @@ export default function App() {
 
   const isGameOver = isCorrect || turn > 5;
 
-  // Listen for physical keyboard input
   useEffect(() => {
     if (isGameOver) return;
 
@@ -29,7 +27,6 @@ export default function App() {
 
     window.addEventListener("keydown", onKeyDown);
 
-    // Remove the listener when the component updates or unmounts
     return () => {
       window.removeEventListener("keydown", onKeyDown);
     };
@@ -70,6 +67,13 @@ export default function App() {
           <button onClick={playAgain}>Play Again</button>
         </div>
       )}
+
+      <div className="demo-section" style={{ textAlign: 'center', padding: '20px', marginTop: '20px' }}>
+        <h3>Project Demo Video</h3>
+        <a href="https://drive.google.com/file/d/1G1xuWc2_Q0kRYAmOQWzrlmJ4WUfP5mK0/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+          <button style={{ padding: '10px 20px', cursor: 'pointer' }}>Watch Demo Video</button>
+        </a>
+      </div>
     </div>
   );
 }
