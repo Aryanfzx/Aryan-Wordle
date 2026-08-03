@@ -41,6 +41,15 @@ export default function App() {
     <div className="App">
       <h1>React Wordle</h1>
 
+      {/* Demo Video Button Placed Safely at the Top */}
+      <div className="demo-section" style={{ marginBottom: '15px' }}>
+        <a href="https://drive.google.com/file/d/1G1xuWc2_Q0kRYAmOQWzrlmJ4WUfP5mK0/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+          <button style={{ padding: '8px 16px', cursor: 'pointer', backgroundColor: '#538d4e', color: 'white', border: 'none', borderRadius: '4px', fontWeight: 'bold' }}>
+            🎥 Watch Project Demo Video
+          </button>
+        </a>
+      </div>
+
       <Board
         guesses={guesses}
         currentGuess={currentGuess}
@@ -67,13 +76,6 @@ export default function App() {
           <button onClick={playAgain}>Play Again</button>
         </div>
       )}
-
-      <div className="demo-section" style={{ textAlign: 'center', padding: '20px', marginTop: '20px' }}>
-        <h3>Project Demo Video</h3>
-        <a href="https://drive.google.com/file/d/1G1xuWc2_Q0kRYAmOQWzrlmJ4WUfP5mK0/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
-          <button style={{ padding: '10px 20px', cursor: 'pointer' }}>Watch Demo Video</button>
-        </a>
-      </div>
     </div>
   );
 }
